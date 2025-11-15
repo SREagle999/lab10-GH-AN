@@ -3,13 +3,6 @@
 # Partner 2: Gabriel Harris
 
 import math
-"""
-calculator.py
-- Defines functions used to create a simple calculator
-
-One function per operation, in order.
-"""
-# First example
 
 def add(a, b):
     return a + b
@@ -32,8 +25,6 @@ def log(a, b):
 
 def exp(a, b):
     math.pow(a, b)
-
-import math
 
 def square_root(a):
     if a < 0:
