@@ -57,7 +57,6 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(calculator.hypotenuse(3, 4), 5)
         self.assertEqual(calculator.hypotenuse(5, 12), 13)
         self.assertAlmostEqual(calculator.hypotenuse(1, 1), 1.414213, places=5)
-        # Test with negative numbers (should work)
         self.assertEqual(calculator.hypotenuse(-3, -4), 5)
 
     def test_sqrt(self):
