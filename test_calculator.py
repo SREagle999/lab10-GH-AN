@@ -1,9 +1,11 @@
+# https://github.com/SREagle999/lab10-GH-AN
+# Partner 1: Abhay Narayan
+# Partner 2: Gabriel Harris
+
 import unittest
 import calculator
 
-
 class TestCalculator(unittest.TestCase):
-    ######### Partner 2
     def test_add(self): # 3 assertions
         self.assertEqual(calculator.add(1,2),3)
         self.assertEqual(calculator.add(4, 12), 16)
@@ -13,14 +15,12 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(calculator.sub(3,1),2)
         self.assertEqual(calculator.sub(10, 7), 9)
         self.assertEqual(calculator.sub(5, 4), 1)
-    # ##########################
 
     def test_multiply(self):
         self.assertEqual(calculator.mul(2, 3), 6)
         self.assertEqual(calculator.mul(7, 2), 14)
         self.assertEqual(calculator.mul(3,3), 9)
 
-    ######## Partner 2
     def test_divide_by_zero(self): # 1 assertion
         with self.assertRaises(ZeroDivisionError):
              div(0,5)
@@ -33,7 +33,6 @@ class TestCalculator(unittest.TestCase):
     def test_log_invalid_base(self): # 1 assertion
         with self.assertRaises(ValueError):
              div(10,-5)
-    # ##########################
     
     def test_multiply(self): # 3 assertions
         self.assertEqual(calculator.multiply(-2, 3), -6)
