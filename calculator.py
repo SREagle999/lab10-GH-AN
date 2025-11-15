@@ -1,3 +1,7 @@
+# https://github.com/SREagle999/lab10-GH-AN
+# Partner 1: Abhay Narayan
+# Partner 2: Gabriel Harris
+
 import math
 """
 calculator.py
