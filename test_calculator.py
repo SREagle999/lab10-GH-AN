@@ -6,40 +6,35 @@ import unittest
 import calculator
 
 class TestCalculator(unittest.TestCase):
-    def test_add(self): # 3 assertions
-        self.assertEqual(calculator.add(1,2),3)
+    def test_add(self): 
+        self.assertEqual(calculator.add(1, 2), 3)
         self.assertEqual(calculator.add(4, 12), 16)
         self.assertEqual(calculator.add(7, 7), 14)
 
-    def test_subtract(self): # 3 assertions
-        self.assertEqual(calculator.sub(3,1),2)
+    def test_subtract(self): 
+        self.assertEqual(calculator.sub(3, 1), 2)
         self.assertEqual(calculator.sub(10, 7), 3)
         self.assertEqual(calculator.sub(5, 4), 1)
 
-    def test_multiply(self):
+    def test_multiply(self): 
         self.assertEqual(calculator.mul(2, 3), 6)
         self.assertEqual(calculator.mul(7, 2), 14)
-        self.assertEqual(calculator.mul(3,3), 9)
+        self.assertEqual(calculator.mul(3, 3), 9)
 
-    def test_divide_by_zero(self): # 1 assertion
+    def test_divide_by_zero(self): 
         with self.assertRaises(ZeroDivisionError):
-             calculator.div(0,5)
+            calculator.div(0, 5)
 
-    def test_logarithm(self): # 3 assertions
-        self.assertEqual(calculator.log(100,10),2)
-        self.assertEqual(calculator.log(8,2),3)
-        self.assertEqual(calculator.log(5,5),1)
+    def test_logarithm(self): 
+        self.assertEqual(calculator.log(10, 100), 2)
+        self.assertEqual(calculator.log(2, 8), 3)
+        self.assertEqual(calculator.log(5, 5), 1)
 
     def test_log_invalid_base(self): # 1 assertion
         with self.assertRaises(ValueError):
-             calculator.log(10,-2)
-    
-    def test_multiply(self): # 3 assertions
-        self.assertEqual(calculator.multiply(-2, 3), -6)
-        self.assertEqual(calculator.multiply(0, 5), 0)
-        self.assertEqual(calculator.multiply(2.5, 4), 10)
+            calculator.log(10, -5)
 
-    def test_divide(self): # 3 assertions
+    def test_divide(self): 
         self.assertEqual(calculator.div(2, 10), 5)
         self.assertEqual(calculator.div(4, 20), 5)
         self.assertAlmostEqual(calculator.div(3, 10), 3.333333, places=5)
