@@ -8,18 +8,18 @@ import calculator
 class TestCalculator(unittest.TestCase):
     def test_add(self): 
         self.assertEqual(calculator.add(1, 2), 3)
-        self.assertEqual(calculator.add(4, 12), 16)
-        self.assertEqual(calculator.add(7, 7), 14)
+        self.assertEqual(calculator.add(4, -12), -8)
+        self.assertEqual(calculator.add(7, -7), 0)
 
     def test_subtract(self): 
         self.assertEqual(calculator.sub(3, 1), 2)
-        self.assertEqual(calculator.sub(10, 7), 3)
-        self.assertEqual(calculator.sub(5, 4), 1)
+        self.assertEqual(calculator.sub(10, -7), 17)
+        self.assertEqual(calculator.sub(4, 5), -1)
 
     def test_multiply(self): 
         self.assertEqual(calculator.mul(2, 3), 6)
-        self.assertEqual(calculator.mul(7, 2), 14)
-        self.assertEqual(calculator.mul(3, 3), 9)
+        self.assertEqual(calculator.mul(7, -2), -14)
+        self.assertEqual(calculator.mul(3, 0), 0)
 
     def test_divide_by_zero(self): 
         with self.assertRaises(ZeroDivisionError):
@@ -27,8 +27,8 @@ class TestCalculator(unittest.TestCase):
 
     def test_logarithm(self): 
         self.assertEqual(calculator.log(10, 100), 2)
-        self.assertEqual(calculator.log(2, 8), 3)
-        self.assertEqual(calculator.log(5, 5), 1)
+        self.assertEqual(calculator.log(2, 0.5), -1)
+        self.assertEqual(calculator.log(5, 1), 0)
 
     def test_log_invalid_base(self): # 1 assertion
         with self.assertRaises(ValueError):
